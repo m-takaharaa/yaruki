@@ -1,0 +1,27 @@
+openapi: '3.0.2'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+    description: Test Server
+    variables:
+      apiVersion:
+        default: v1
+        description: API Version
+paths:
+  /test:
+    get:
+      tags:
+        - ""
+      description: Test
+      parameters:
+        - name: test
+          in: query
+          description: Test
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
